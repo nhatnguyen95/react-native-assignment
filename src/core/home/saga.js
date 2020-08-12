@@ -1,14 +1,17 @@
 import { put, takeEvery, call } from "redux-saga/effects";
 import { GET_DATA_SUCCESS, GET_DATA, GET_DATA_FAIL } from "./const";
-import { getRecruitmentChallenges } from "../../services/Apis";
+import { getRecruitmentChallenges } from "services/Apis";
+
 
 function* getDataSaga() {
   try {
     const response = yield call(getRecruitmentChallenges);
-    yield put({
-      type: GET_DATA_SUCCESS,
-      data: response,
-    });
+    if (response.status === 200) {
+      yield put({
+        type: GET_DATA_SUCCESS,
+        data: response?.data || {},
+      });
+    }
   } catch (error) {
     yield put({
       type: GET_DATA_FAIL,

@@ -14,7 +14,7 @@ const homeReducer = (state = initialState, action) => {
     case GET_DATA_FAIL:
       return {
         ...state,
-        data: {},
+        data: [],
       };
 
     default:

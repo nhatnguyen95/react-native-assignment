@@ -1,5 +1,5 @@
-import ApiUtils from "../utils/ApiUtils";
-import { RECRUITMENT_CHALLENGE } from "../constants/Urls";
+import ApiUtils from "utils/ApiUtils";
+import Urls from "constants/Urls";
 
 export const getRecruitmentChallenges = () =>
-  ApiUtils.get(RECRUITMENT_CHALLENGE);
+  ApiUtils.get(Urls.RECRUITMENT_CHALLENGE);

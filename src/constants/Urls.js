@@ -1,3 +1,8 @@
-export const BASE_URL = "https://api.gigacover.com/";
+BASE_URL = "https://api.gigacover.com/";
 
-export const RECRUITMENT_CHALLENGE = "recruitment/challenge";
+RECRUITMENT_CHALLENGE = "recruitment/challenge";
+
+export default {
+  BASE_URL,
+  RECRUITMENT_CHALLENGE,
+}

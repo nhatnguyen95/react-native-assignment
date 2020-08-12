@@ -6,3 +6,9 @@ export const selectHomeData = createSelector(
   selectHome,
   state => state.data,
 );
+
+
+export const selectTrips = createSelector(
+  selectHome,
+  state => state.data?.trips || [],
+);
