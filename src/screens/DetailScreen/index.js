@@ -1,8 +1,10 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import moment from "moment";
 import { selectTrips } from "core/home/selectors";
+import Strings from "../../constants/Strings";
 import styles from "./styles";
 
 class DetailScreen extends React.Component {
@@ -16,19 +18,40 @@ class DetailScreen extends React.Component {
     this.setState({ tripIndex });
   }
 
+  renderRow = (label, value, unit) => (
+    <View style={styles.row}>
+      <Text>{label}: </Text>
+      <Text>
+        {value} {unit}
+      </Text>
+    </View>
+  );
+
   render() {
     const { tripIndex } = this.state;
     const { trips } = this.props;
+    const trip = trips[tripIndex];
     return (
       <View style={styles.container}>
-        {
-          tripIndex === -1 ? null : (
+        <ScrollView>
+          {tripIndex === -1 ? null : (
             <View>
-              <Text>{JSON.stringify(trips[tripIndex])}</Text>
+              <Text style={styles.tripIdText}>#{trip.trip_id}</Text>
+              <View>
+                {this.renderRow("Duration", trip.duration, "second(s)")}
+                {this.renderRow("Distance", trip.distance, "kilometer(s)")}
+                {this.renderRow(
+                  "Start Time",
+                  moment(trip.start_time).format(Strings.DATE_TIME_FORMAT)
+                )}
+                {this.renderRow(
+                  "End Time",
+                  moment(trip.end_time).format(Strings.DATE_TIME_FORMAT)
+                )}
+              </View>
             </View>
-          )
-        }
-  
+          )}
+        </ScrollView>
       </View>
     );
   }
@@ -39,7 +62,6 @@ const mapStateToProps = (state) => {
     trips: selectTrips(state),
   };
 };
-
 
 DetailScreen.propTypes = {
   trips: PropTypes.array,
