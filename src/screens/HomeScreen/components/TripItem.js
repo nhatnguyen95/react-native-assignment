@@ -13,18 +13,17 @@ TripItem.propTypes = {
   onPress: PropTypes.func,
 };
 
-
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     paddingVertical: 20,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     marginTop: 1,
   },
   tripIdText: {
     fontSize: 16,
-  }
-})
+  },
+});
 
 export default TripItem;
