@@ -7,7 +7,7 @@ import { selectTrips } from "core/home/selectors";
 import Strings from "../../constants/Strings";
 import styles from "./styles";
 
-class DetailScreen extends React.Component {
+export class DetailScreen extends React.Component {
   state = {
     tripIndex: -1,
   };
@@ -34,7 +34,7 @@ class DetailScreen extends React.Component {
     return (
       <View style={styles.container}>
         <ScrollView>
-          {tripIndex === -1 ? null : (
+          {tripIndex === -1 || !trip ? null : (
             <View>
               <Text style={styles.tripIdText}>#{trip.trip_id}</Text>
               <View>

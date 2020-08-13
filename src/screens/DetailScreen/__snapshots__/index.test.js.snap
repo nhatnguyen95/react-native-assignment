@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailScreen Rendering should match to snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "padding": 10,
+    }
+  }
+>
+  <RCTScrollView>
+    <View />
+  </RCTScrollView>
+</View>
+`;

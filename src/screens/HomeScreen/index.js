@@ -7,7 +7,7 @@ import { selectTrips } from "core/home/selectors";
 import { getDataAction } from "core/home/actions";
 import TripItem from "./components/TripItem";
 
-class HomeScreen extends React.Component {
+export class HomeScreen extends React.Component {
   componentDidMount() {
     const { getData } = this.props;
     getData();

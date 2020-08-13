@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TripItem Rendering should match to snapshot 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "justifyContent": "center",
+      "marginTop": 1,
+      "opacity": 1,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    Trip Id: 
+    0
+  </Text>
+</View>
+`;
