@@ -19,7 +19,7 @@ export class HomeScreen extends React.Component {
   };
 
   renderItem = ({ item, index }) => (
-    <TripItem id={item.trip_id} onPress={() => this.onPressItem(index)} />
+    <TripItem testId="trip-item" id={item.trip_id} onPress={() => this.onPressItem(index)} />
   );
 
   keyExtractor = (item) => `item - ${item.trip_id}`;
