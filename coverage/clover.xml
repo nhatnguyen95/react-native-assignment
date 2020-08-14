@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1597396809121" clover="3.2.0">
-  <project timestamp="1597396809121" name="All files">
-    <metrics statements="72" coveredstatements="63" conditionals="19" coveredconditionals="13" methods="27" coveredmethods="17" elements="118" coveredelements="93" complexity="0" loc="72" ncloc="72" packages="7" files="15" classes="15"/>
+<coverage generated="1597399566486" clover="3.2.0">
+  <project timestamp="1597399566486" name="All files">
+    <metrics statements="64" coveredstatements="60" conditionals="18" coveredconditionals="13" methods="25" coveredmethods="17" elements="107" coveredelements="90" complexity="0" loc="64" ncloc="64" packages="5" files="13" classes="13"/>
     <package name="constants">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="MockData.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/constants/MockData.js">
@@ -118,26 +118,6 @@
         <line num="6" count="5" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
         <line num="16" count="2" type="stmt"/>
-      </file>
-    </package>
-    <package name="services">
-      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="Apis.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/services/Apis.js">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="utils">
-      <metrics statements="6" coveredstatements="2" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="ApiUtils.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/utils/ApiUtils.js">
-        <metrics statements="6" coveredstatements="2" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="9" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
       </file>
     </package>
   </project>
