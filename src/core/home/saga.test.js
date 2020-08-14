@@ -1,6 +1,7 @@
-import { takeEvery } from "redux-saga/effects";
+import { takeEvery, put, call } from "redux-saga/effects";
 import { trips } from "constants/MockData";
-import { GET_DATA, GET_DATA_SUCCESS } from "./const";
+import { getRecruitmentChallenges } from "services/Apis";
+import { GET_DATA } from "./const";
 import { getDataSuccess, getDataFail } from "./actions";
 const { watchHome, getDataSaga } = require("./saga");
 
@@ -18,9 +19,9 @@ describe("Home saga", () => {
     const genGetDataSaga = getDataSaga();
     const mockResponse = { status: 200, data: trips };
     const expectedAction = getDataSuccess(mockResponse.data);
-    genGetDataSaga.next();
-    expect(genGetDataSaga.next(mockResponse).value.payload.action).toEqual(
-      expectedAction
+    genGetDataSaga.next()
+    expect(genGetDataSaga.next(mockResponse).value).toEqual(
+      put(expectedAction)
     );
   });
 
@@ -29,8 +30,8 @@ describe("Home saga", () => {
     const mockResponse = { status: 400 };
     const expectedAction = getDataFail(mockResponse.status);
     genGetDataSaga.next();
-    expect(genGetDataSaga.next(mockResponse).value.payload.action).toEqual(
-      expectedAction
+    expect(genGetDataSaga.next(mockResponse).value).toEqual(
+      put(expectedAction)
     );
   });
 });

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1597392328039" clover="3.2.0">
-  <project timestamp="1597392328039" name="All files">
-    <metrics statements="66" coveredstatements="55" conditionals="13" coveredconditionals="8" methods="26" coveredmethods="14" elements="105" coveredelements="77" complexity="0" loc="66" ncloc="66" packages="7" files="14" classes="14"/>
+<coverage generated="1597396809121" clover="3.2.0">
+  <project timestamp="1597396809121" name="All files">
+    <metrics statements="72" coveredstatements="63" conditionals="19" coveredconditionals="13" methods="27" coveredmethods="17" elements="118" coveredelements="93" complexity="0" loc="72" ncloc="72" packages="7" files="15" classes="15"/>
     <package name="constants">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="MockData.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/constants/MockData.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="3" type="stmt"/>
+        <line num="1" count="5" type="stmt"/>
       </file>
       <file name="Strings.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/constants/Strings.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -19,18 +19,27 @@
       </file>
     </package>
     <package name="core.home">
-      <metrics statements="18" coveredstatements="16" conditionals="6" coveredconditionals="3" methods="8" coveredmethods="5"/>
+      <metrics statements="24" coveredstatements="24" conditionals="12" coveredconditionals="8" methods="9" coveredmethods="8"/>
       <file name="actions.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/home/actions.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
       </file>
       <file name="const.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/home/const.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+      </file>
+      <file name="reducer.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/home/reducer.js">
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="9" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
       </file>
       <file name="saga.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/home/saga.js">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
@@ -43,12 +52,12 @@
         <line num="20" count="1" type="stmt"/>
       </file>
       <file name="selectors.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/home/selectors.js">
-        <metrics statements="5" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="1" falsecount="1"/>
       </file>
     </package>
     <package name="screens.DetailScreen">

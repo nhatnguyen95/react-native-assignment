@@ -1,7 +1,8 @@
 import { GET_DATA_SUCCESS, GET_DATA_FAIL } from "./const";
 
-const initialState = {
+export const initialState = {
   data: {},
+  error: '',
 }
 
 const homeReducer = (state = initialState, action) => {
@@ -10,16 +11,18 @@ const homeReducer = (state = initialState, action) => {
       return {
         ...state,
         data: action.data,
+        error: '',
       };
     case GET_DATA_FAIL:
       return {
         ...state,
-        data: [],
+        data: {},
+        error: action.error,
       };
 
     default:
       return {
-        state,
+        ...state,
       };
   }
 };
