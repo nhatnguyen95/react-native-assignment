@@ -29,7 +29,8 @@ exports[`TripItem Rendering should match to snapshot 1`] = `
       }
     }
   >
-    Trip Id: 
+    Trip Id
+    : 
     0
   </Text>
 </View>

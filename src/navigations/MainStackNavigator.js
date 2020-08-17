@@ -12,10 +12,12 @@ const MainStackNavigator = () => {
       <StackNavigator.Screen
         name="HomeScreen"
         component={HomeScreen}
+        options={{ headerTitle: 'Home' }}
       />
       <StackNavigator.Screen
         name="DetailScreen"
         component={DetailScreen}
+        options={{ headerTitle: 'Trip Details' }}
       />
   
     </StackNavigator.Navigator>

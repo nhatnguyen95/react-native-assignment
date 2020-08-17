@@ -29,7 +29,7 @@ describe("TripItem", () => {
     it("should equal 10", () => {
       const wrapper = shallow(<TripItem id={10} />);
       const text = wrapper.find(Text);
-      const id = text.props().children[1];
+      const id = text.props().children[2];
       expect(id).toBe(10);
     });
   });

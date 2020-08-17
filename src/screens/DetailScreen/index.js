@@ -33,24 +33,22 @@ export class DetailScreen extends React.Component {
     const trip = trips[tripIndex];
     return (
       <View style={styles.container}>
-        <ScrollView testID="scroll-view">
-          {tripIndex === -1 || !trip ? null : (
+        <ScrollView >
+          <View testID="trip-view" trips={trips}>
+            <Text style={styles.tripIdText}>#{trip?.trip_id || 0}</Text>
             <View>
-              <Text style={styles.tripIdText}>#{trip.trip_id}</Text>
-              <View>
-                {this.renderRow("Duration", trip.duration, "second(s)")}
-                {this.renderRow("Distance", trip.distance, "kilometer(s)")}
-                {this.renderRow(
-                  "Start Time",
-                  moment(trip.start_time).format(Strings.DATE_TIME_FORMAT)
-                )}
-                {this.renderRow(
-                  "End Time",
-                  moment(trip.end_time).format(Strings.DATE_TIME_FORMAT)
-                )}
-              </View>
+              {this.renderRow(Strings.DURATION, trip?.duration || 0, Strings.SECONDS)}
+              {this.renderRow(Strings.DISTANCE, trip?.distance || 0, Strings.KILOMETERS)}
+              {this.renderRow(
+                Strings.START_TIME,
+                moment(trip?.start_time || 0).format(Strings.DATE_TIME_FORMAT)
+              )}
+              {this.renderRow(
+                Strings.END_TIME,
+                moment(trip?.end_time || 0).format(Strings.DATE_TIME_FORMAT)
+              )}
             </View>
-          )}
+          </View>
         </ScrollView>
       </View>
     );
@@ -58,7 +56,6 @@ export class DetailScreen extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('state', state);
   return {
     trips: selectTrips(state),
   };

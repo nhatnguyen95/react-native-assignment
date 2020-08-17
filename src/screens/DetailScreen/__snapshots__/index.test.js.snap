@@ -10,10 +10,113 @@ exports[`DetailScreen should match to snapshot 1`] = `
     }
   }
 >
-  <RCTScrollView
-    testID="scroll-view"
-  >
-    <View />
+  <RCTScrollView>
+    <View>
+      <View
+        testID="trip-view"
+        trips={Array []}
+      >
+        <Text
+          style={
+            Object {
+              "alignSelf": "center",
+              "fontSize": 17,
+            }
+          }
+        >
+          #
+          0
+        </Text>
+        <View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "fontSize": 14,
+                "justifyContent": "space-between",
+                "padding": 5,
+              }
+            }
+            testID="Duration"
+          >
+            <Text>
+              Duration
+              : 
+            </Text>
+            <Text>
+              0
+               
+              second(s)
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "fontSize": 14,
+                "justifyContent": "space-between",
+                "padding": 5,
+              }
+            }
+            testID="Distance"
+          >
+            <Text>
+              Distance
+              : 
+            </Text>
+            <Text>
+              0
+               
+              kilometer(s)
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "fontSize": 14,
+                "justifyContent": "space-between",
+                "padding": 5,
+              }
+            }
+            testID="Start Time"
+          >
+            <Text>
+              Start Time
+              : 
+            </Text>
+            <Text>
+              01/01/1970 08:00:00
+               
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "fontSize": 14,
+                "justifyContent": "space-between",
+                "padding": 5,
+              }
+            }
+            testID="End Time"
+          >
+            <Text>
+              End Time
+              : 
+            </Text>
+            <Text>
+              01/01/1970 08:00:00
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
   </RCTScrollView>
 </View>
 `;

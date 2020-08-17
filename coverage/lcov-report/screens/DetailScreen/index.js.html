@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/15</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/15</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
@@ -129,10 +129,7 @@
 <a name='L70'></a><a href='#L70'>70</a>
 <a name='L71'></a><a href='#L71'>71</a>
 <a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -142,32 +139,30 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -192,8 +187,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -227,8 +221,8 @@ export class DetailScreen extends React.Component {
     this.setState({ tripIndex });
   }
 &nbsp;
-  renderRow = <span class="fstat-no" title="function not covered" >(l</span>abel, value, unit) =&gt; (
-<span class="cstat-no" title="statement not covered" >    &lt;View testID={label} style={styles.row}&gt;</span>
+  renderRow = (label, value, unit) =&gt; (
+    &lt;View testID={label} style={styles.row}&gt;
       &lt;Text&gt;{label}: &lt;/Text&gt;
       &lt;Text&gt;
         {value} {unit}
@@ -242,33 +236,30 @@ export class DetailScreen extends React.Component {
     const trip = trips[tripIndex];
     return (
       &lt;View style={styles.container}&gt;
-        &lt;ScrollView testID="scroll-view"&gt;
-          {tripIndex === -1 || !trip ? null : (
-<span class="branch-1 cbranch-no" title="branch not covered" >            &lt;View&gt;</span>
-              &lt;Text style={styles.tripIdText}&gt;#{trip.trip_id}&lt;/Text&gt;
-              &lt;View&gt;
-                {this.renderRow("Duration", trip.duration, "second(s)")}
-                {this.renderRow("Distance", trip.distance, "kilometer(s)")}
-                {this.renderRow(
-                  "Start Time",
-                  moment(trip.start_time).format(Strings.DATE_TIME_FORMAT)
-                )}
-                {this.renderRow(
-                  "End Time",
-                  moment(trip.end_time).format(Strings.DATE_TIME_FORMAT)
-                )}
-              &lt;/View&gt;
+        &lt;ScrollView &gt;
+          &lt;View testID="trip-view" trips={trips}&gt;
+            &lt;Text style={styles.tripIdText}&gt;#{trip?.trip_id || 0}&lt;/Text&gt;
+            &lt;View&gt;
+              {this.renderRow(Strings.DURATION, trip?.duration || 0, Strings.SECONDS)}
+              {this.renderRow(Strings.DISTANCE, trip?.distance || 0, Strings.KILOMETERS)}
+              {this.renderRow(
+                Strings.START_TIME,
+                moment(trip?.start_time || 0).format(Strings.DATE_TIME_FORMAT)
+              )}
+              {this.renderRow(
+                Strings.END_TIME,
+                moment(trip?.end_time || 0).format(Strings.DATE_TIME_FORMAT)
+              )}
             &lt;/View&gt;
-          )}
+          &lt;/View&gt;
         &lt;/ScrollView&gt;
       &lt;/View&gt;
     );
   }
 }
 &nbsp;
-const mapStateToProps = <span class="fstat-no" title="function not covered" >(s</span>tate) =&gt; {
-<span class="cstat-no" title="statement not covered" >  console.log('state', state);</span>
-<span class="cstat-no" title="statement not covered" >  return {</span>
+const mapStateToProps = (state) =&gt; {
+  return {
     trips: selectTrips(state),
   };
 };
@@ -289,7 +280,7 @@ export default connect(mapStateToProps, null)(DetailScreen);
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Aug 17 2020 15:41:03 GMT+0700 (Indochina Time)
+                at Mon Aug 17 2020 16:19:21 GMT+0700 (Indochina Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

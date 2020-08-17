@@ -83,7 +83,8 @@ exports[`HomeScreen Rendering should match to snapshot 1`] = `
               }
             }
           >
-            Trip Id: 
+            Trip Id
+            : 
             17094
           </Text>
         </View>
@@ -120,7 +121,8 @@ exports[`HomeScreen Rendering should match to snapshot 1`] = `
               }
             }
           >
-            Trip Id: 
+            Trip Id
+            : 
             17095
           </Text>
         </View>

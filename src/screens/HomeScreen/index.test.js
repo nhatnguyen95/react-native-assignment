@@ -2,7 +2,7 @@ import "react-native";
 import React from "react";
 import renderer from "react-test-renderer";
 import { shallow } from "enzyme";
-import { render } from "../../utils/TestUtils";
+import { render } from "utils/TestUtils";
 import { trips } from "constants/MockData";
 import configureStore from "redux-mock-store";
 import { HomeScreen } from "./index";
@@ -37,7 +37,7 @@ describe("HomeScreen", () => {
   });
 
   describe("Navigate to other Screen", () => {
-    it("should navigate to other screen", () => {
+    it("should navigate to other screen when press on item", () => {
       const tripIndex = 0;
       const navigation = { navigate: jest.fn() };
       const wrapper = renderer.create(<HomeScreen navigation={navigation} />);

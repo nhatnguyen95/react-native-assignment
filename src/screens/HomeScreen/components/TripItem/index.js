@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import Strings from "constants/Strings";
 
 const TripItem = ({ id = 0, onPress = () => {} }) => (
   <TouchableOpacity style={styles.container} onPress={onPress}>
-    <Text style={styles.tripIdText}>Trip Id: {id}</Text>
+    <Text style={styles.tripIdText}>{Strings.TRIP_ID}: {id}</Text>
   </TouchableOpacity>
 );
 
