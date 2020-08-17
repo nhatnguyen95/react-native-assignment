@@ -10,7 +10,9 @@ exports[`DetailScreen should match to snapshot 1`] = `
     }
   }
 >
-  <RCTScrollView>
+  <RCTScrollView
+    testID="scroll-view"
+  >
     <View />
   </RCTScrollView>
 </View>

@@ -32,6 +32,7 @@ export class HomeScreen extends React.Component {
           data={data}
           keyExtractor={this.keyExtractor}
           renderItem={this.renderItem}
+          testID="flat-list"
         />
       </View>
     );

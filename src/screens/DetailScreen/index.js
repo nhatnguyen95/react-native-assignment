@@ -19,7 +19,7 @@ export class DetailScreen extends React.Component {
   }
 
   renderRow = (label, value, unit) => (
-    <View style={styles.row}>
+    <View testID={label} style={styles.row}>
       <Text>{label}: </Text>
       <Text>
         {value} {unit}
@@ -33,7 +33,7 @@ export class DetailScreen extends React.Component {
     const trip = trips[tripIndex];
     return (
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView testID="scroll-view">
           {tripIndex === -1 || !trip ? null : (
             <View>
               <Text style={styles.tripIdText}>#{trip.trip_id}</Text>
@@ -58,6 +58,7 @@ export class DetailScreen extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log('state', state);
   return {
     trips: selectTrips(state),
   };
