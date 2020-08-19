@@ -8,21 +8,25 @@ const INITIAL_ROUTE_NAME = "HomeScreen";
 
 const MainStackNavigator = () => {
   return (
-    <StackNavigator.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
-      <StackNavigator.Screen
-        name="HomeScreen"
-        component={HomeScreen}
-        options={{ headerTitle: 'Home' }}
-      />
+    <StackNavigator.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+      initialRouteName={INITIAL_ROUTE_NAME}
+    >
+      <StackNavigator.Screen name="HomeScreen" component={HomeScreen} />
       <StackNavigator.Screen
         name="DetailScreen"
         component={DetailScreen}
-        options={{ headerTitle: 'Trip Details' }}
+        options={{ header: null }}
       />
-  
     </StackNavigator.Navigator>
   );
-}
+};
 
+const moreHeaderOptions = {
+  // headerStyle: {backgroundColor: '#51bd8a'},
+  // headerTintColor: '#fff'
+};
 
 export default MainStackNavigator;

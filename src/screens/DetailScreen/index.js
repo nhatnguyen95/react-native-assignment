@@ -3,6 +3,7 @@ import { View, Text, ScrollView } from "react-native";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import moment from "moment";
+import Layout from 'components/Layout';
 import { selectTrips } from "core/home/selectors";
 import Strings from "../../constants/Strings";
 import styles from "./styles";
@@ -32,7 +33,7 @@ export class DetailScreen extends React.Component {
     const { trips } = this.props;
     const trip = trips[tripIndex];
     return (
-      <View style={styles.container}>
+      <Layout style={styles.container} title="Details">
         <ScrollView >
           <View testID="trip-view" trips={trips}>
             <Text style={styles.tripIdText}>#{trip?.trip_id || 0}</Text>
@@ -50,7 +51,7 @@ export class DetailScreen extends React.Component {
             </View>
           </View>
         </ScrollView>
-      </View>
+      </Layout>
     );
   }
 }

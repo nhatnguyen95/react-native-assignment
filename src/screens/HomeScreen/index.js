@@ -2,6 +2,7 @@ import React from "react";
 import { View, FlatList } from "react-native";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import Layout from 'components/Layout';
 import styles from "./styles";
 import { selectTrips } from "core/home/selectors";
 import { getDataAction } from "core/home/actions";
@@ -27,14 +28,14 @@ export class HomeScreen extends React.Component {
   render() {
     const { data } = this.props;
     return (
-      <View style={styles.container}>
+      <Layout style={styles.container} title="Home" canBack={false}>
         <FlatList
           data={data}
           keyExtractor={this.keyExtractor}
           renderItem={this.renderItem}
           testID="flat-list"
         />
-      </View>
+      </Layout>
     );
   }
 }
