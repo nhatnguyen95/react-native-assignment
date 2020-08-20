@@ -2,17 +2,92 @@
 
 exports[`DetailScreen should match to snapshot 1`] = `
 <View
+  accessibilityIgnoresInvertColors={true}
   style={
     Object {
-      "backgroundColor": "#fff",
       "flex": 1,
-      "padding": 10,
     }
   }
 >
+  <Image
+    resizeMode="cover"
+    source={1}
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": undefined,
+          "width": undefined,
+        },
+        Object {
+          "marginTop": 100,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": 80,
+        "paddingTop": 25,
+        "width": 750,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "marginHorizontal": 20,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text />
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#51bd8a",
+          "fontSize": 18,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Details
+    </Text>
+  </View>
   <RCTScrollView>
     <View>
       <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "borderColor": "#51bd8a",
+            "borderRadius": 8,
+            "borderWidth": 1,
+            "margin": 10,
+            "paddingHorizontal": 10,
+            "paddingVertical": 20,
+          }
+        }
         testID="trip-view"
         trips={Array []}
       >
@@ -20,7 +95,9 @@ exports[`DetailScreen should match to snapshot 1`] = `
           style={
             Object {
               "alignSelf": "center",
-              "fontSize": 17,
+              "color": "#51bd8a",
+              "fontSize": 19,
+              "fontWeight": "bold",
             }
           }
         >
@@ -40,11 +117,25 @@ exports[`DetailScreen should match to snapshot 1`] = `
             }
             testID="Duration"
           >
-            <Text>
+            <Text
+              style={
+                Object {
+                  "color": "#4a4a4a",
+                  "fontSize": 17,
+                }
+              }
+            >
               Duration
               : 
             </Text>
-            <Text>
+            <Text
+              style={
+                Object {
+                  "color": "#4a4a4a",
+                  "fontSize": 17,
+                }
+              }
+            >
               0
                
               second(s)
@@ -62,11 +153,25 @@ exports[`DetailScreen should match to snapshot 1`] = `
             }
             testID="Distance"
           >
-            <Text>
+            <Text
+              style={
+                Object {
+                  "color": "#4a4a4a",
+                  "fontSize": 17,
+                }
+              }
+            >
               Distance
               : 
             </Text>
-            <Text>
+            <Text
+              style={
+                Object {
+                  "color": "#4a4a4a",
+                  "fontSize": 17,
+                }
+              }
+            >
               0
                
               kilometer(s)
@@ -84,11 +189,25 @@ exports[`DetailScreen should match to snapshot 1`] = `
             }
             testID="Start Time"
           >
-            <Text>
+            <Text
+              style={
+                Object {
+                  "color": "#4a4a4a",
+                  "fontSize": 17,
+                }
+              }
+            >
               Start Time
               : 
             </Text>
-            <Text>
+            <Text
+              style={
+                Object {
+                  "color": "#4a4a4a",
+                  "fontSize": 17,
+                }
+              }
+            >
               01/01/1970 08:00:00
                
             </Text>
@@ -105,11 +224,25 @@ exports[`DetailScreen should match to snapshot 1`] = `
             }
             testID="End Time"
           >
-            <Text>
+            <Text
+              style={
+                Object {
+                  "color": "#4a4a4a",
+                  "fontSize": 17,
+                }
+              }
+            >
               End Time
               : 
             </Text>
-            <Text>
+            <Text
+              style={
+                Object {
+                  "color": "#4a4a4a",
+                  "fontSize": 17,
+                }
+              }
+            >
               01/01/1970 08:00:00
                
             </Text>

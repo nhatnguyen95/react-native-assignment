@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import React from "react";
 import {
   ImageBackground,
@@ -6,10 +7,10 @@ import {
   Image,
   Text,
   TouchableOpacity,
+  Platform,
 } from "react-native";
-import { BlurView } from "expo-blur";
+import PropTypes from 'prop-types';
 import { AntDesign } from "@expo/vector-icons";
-import { useNavigation } from '@react-navigation/native';
 import { screenWidth } from "utils/CommonUtils";
 
 const styles = StyleSheet.create({
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    height: 80,
+    height: Platform.OS === 'ios' ? 80 : 90,
     width: screenWidth,
 
     alignItems: "center",
@@ -39,23 +40,18 @@ const styles = StyleSheet.create({
   }
 });
 
-const Layout = ({ children, title = "", canBack = true }) => {
-  const navigation = useNavigation(); 
+const Layout = ({ navigation, children, title = "", canBack = true }) => {
   const onPressBack = () => {
     navigation.goBack();
   }
 
   return (
     <ImageBackground
-      imageStyle={{ alignSelf: "flex-end" }}
+      imageStyle={{ marginTop: 100 }}
       resizeMode="cover"
       style={styles.background}
       source={require("../assets/images/background.png")}
     >
-      <BlurView
-        intensity={100}
-        style={[StyleSheet.absoluteFill, styles.nonBlurredContent]}
-      >
         <View style={styles.header}>
           {!canBack ? (
             <Image
@@ -70,9 +66,14 @@ const Layout = ({ children, title = "", canBack = true }) => {
           <Text style={styles.titleText}>{title}</Text>
         </View>
         {children}
-      </BlurView>
     </ImageBackground>
   );
 };
+
+Layout.propTypes = {
+  navigation: PropTypes.object.isRequired,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  canBack: PropTypes.bool,
+}
 
 export default Layout;

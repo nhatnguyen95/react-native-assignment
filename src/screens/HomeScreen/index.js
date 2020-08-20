@@ -26,9 +26,9 @@ export class HomeScreen extends React.Component {
   keyExtractor = (item) => `item - ${item.trip_id}`;
 
   render() {
-    const { data } = this.props;
+    const { data, navigation } = this.props;
     return (
-      <Layout style={styles.container} title="Home" canBack={false}>
+      <Layout navigation={navigation} style={styles.container} title="Home" canBack={false}>
         <FlatList
           data={data}
           keyExtractor={this.keyExtractor}

@@ -21,8 +21,8 @@ export class DetailScreen extends React.Component {
 
   renderRow = (label, value, unit) => (
     <View testID={label} style={styles.row}>
-      <Text>{label}: </Text>
-      <Text>
+      <Text style={styles.textRow}>{label}: </Text>
+      <Text style={styles.textRow}>
         {value} {unit}
       </Text>
     </View>
@@ -30,12 +30,12 @@ export class DetailScreen extends React.Component {
 
   render() {
     const { tripIndex } = this.state;
-    const { trips } = this.props;
+    const { trips, navigation } = this.props;
     const trip = trips[tripIndex];
     return (
-      <Layout style={styles.container} title="Details">
+      <Layout navigation={navigation} style={styles.container} title="Details">
         <ScrollView >
-          <View testID="trip-view" trips={trips}>
+          <View style={styles.card} testID="trip-view" trips={trips}>
             <Text style={styles.tripIdText}>#{trip?.trip_id || 0}</Text>
             <View>
               {this.renderRow(Strings.DURATION, trip?.duration || 0, Strings.SECONDS)}

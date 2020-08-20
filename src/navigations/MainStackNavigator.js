@@ -24,9 +24,4 @@ const MainStackNavigator = () => {
   );
 };
 
-const moreHeaderOptions = {
-  // headerStyle: {backgroundColor: '#51bd8a'},
-  // headerTintColor: '#fff'
-};
-
 export default MainStackNavigator;

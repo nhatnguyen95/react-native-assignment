@@ -1,16 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { TouchableOpacity, Text, StyleSheet, View } from "react-native";
-import { BlurView } from 'expo-blur';
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import Strings from "constants/Strings";
 
 
 const TripItem = ({ id = 0, onPress = () => {} }) => (
-  // <BlurView intensity={70} tint="dark"  style={styles.container}>
-  <TouchableOpacity style={styles.container} onPress={onPress}>
+  <TouchableOpacity activeOpacity={0.8} style={styles.container} onPress={onPress}>
     <Text style={styles.tripIdText}>{Strings.TRIP_ID}: {id}</Text>
   </TouchableOpacity>
-  // </BlurView>
 );
 
 TripItem.propTypes = {
@@ -26,11 +23,15 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 10,
     marginHorizontal: 10,
-    backgroundColor: '#51bd8acc'
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#51bd8a',
+    paddingVertical: 20,
+    paddingHorizontal: 10,
   },
   tripIdText: {
-    fontSize: 16,
-    color: '#fff',
+    fontSize: 19,
+    color: '#51bd8a',
     fontWeight: 'bold'
   },
 });

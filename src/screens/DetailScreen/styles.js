@@ -15,8 +15,23 @@ const styles = StyleSheet.create({
   },
   tripIdText: {
     alignSelf: "center",
-    fontSize: 17
+    fontSize: 19,
+    color: '#51bd8a',
+    fontWeight: 'bold'
   },
+  card: {
+    backgroundColor: '#fff',
+    margin: 10,
+    borderRadius: 8,
+    paddingVertical: 20,
+    paddingHorizontal: 10,
+    borderColor: '#51bd8a',
+    borderWidth: 1,
+  },
+  textRow: {
+    color: '#4a4a4a',
+    fontSize: 17,
+  }
 });
 
 export default styles;

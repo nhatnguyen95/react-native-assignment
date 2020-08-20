@@ -7,5 +7,5 @@ export default {
   END_TIME: 'End Time',
   SECONDS: 'second(s)',
   KILOMETERS: 'kilometer(s)',
-  TRIP_ID: 'Trip Id',
+  TRIP_ID: 'TRIP',
 };
