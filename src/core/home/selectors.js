@@ -11,3 +11,8 @@ export const selectTrips = createSelector(
   selectHomeData,
   (state) => state.trips || []
 );
+
+export const selectIsLoading = createSelector(
+  selectHome,
+  (state) => state.isLoading
+);

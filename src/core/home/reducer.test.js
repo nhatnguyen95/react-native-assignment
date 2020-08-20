@@ -5,12 +5,12 @@ import { getDataSuccess, getDataFail, getDataAction } from "./actions";
 describe("Home reducer", () => {
   it("should capture success after success dispatched", () => {
     const mockData = {data: trips };
-    expect(HomeReducer(initialState, getDataSuccess(trips))).toEqual({...mockData, error: ''})
+    expect(HomeReducer(initialState, getDataSuccess(trips))).toEqual({...mockData, error: '', isLoading: false})
   })
 
   it("should capture failed after fail dispatched", () => {
     const mockError = '400';
-    expect(HomeReducer(initialState, getDataFail(mockError))).toEqual({error: mockError, data: {}})
+    expect(HomeReducer(initialState, getDataFail(mockError))).toEqual({error: mockError, data: {}, isLoading: false})
   })
 
   it("should not capture if other dispatched", () => {

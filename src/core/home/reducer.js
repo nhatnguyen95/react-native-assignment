@@ -1,9 +1,10 @@
-import { GET_DATA_SUCCESS, GET_DATA_FAIL } from "./const";
+import { GET_DATA_SUCCESS, GET_DATA_FAIL, GET_DATA } from "./const";
 
 export const initialState = {
   data: {},
-  error: '',
-}
+  error: "",
+  isLoading: true,
+};
 
 const homeReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -11,13 +12,15 @@ const homeReducer = (state = initialState, action) => {
       return {
         ...state,
         data: action.data,
-        error: '',
+        error: "",
+        isLoading: false,
       };
     case GET_DATA_FAIL:
       return {
         ...state,
         data: {},
         error: action.error,
+        isLoading: false,
       };
 
     default:

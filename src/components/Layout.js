@@ -71,7 +71,7 @@ const Layout = ({ navigation, children, title = "", canBack = true }) => {
 };
 
 Layout.propTypes = {
-  navigation: PropTypes.object.isRequired,
+  navigation: PropTypes.object,
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   canBack: PropTypes.bool,
 }
