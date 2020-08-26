@@ -16,6 +16,6 @@ export function* getDataSaga() {
   }
 }
 
-export function* watchHome() {
+export function* watchListTrip() {
   yield takeEvery(GET_DATA, getDataSaga);
 }

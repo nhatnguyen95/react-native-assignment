@@ -6,7 +6,7 @@ export const initialState = {
   isLoading: true,
 };
 
-const homeReducer = (state = initialState, action) => {
+const listTripReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_DATA_SUCCESS:
       return {
@@ -30,4 +30,4 @@ const homeReducer = (state = initialState, action) => {
   }
 };
 
-export default homeReducer;
+export default listTripReducer;

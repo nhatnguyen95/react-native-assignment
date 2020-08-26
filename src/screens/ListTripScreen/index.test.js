@@ -5,26 +5,26 @@ import { shallow } from "enzyme";
 import { render } from "utils/TestUtils";
 import { trips } from "constants/MockData";
 import configureStore from "redux-mock-store";
-import { HomeScreen } from "./index";
-import ConnectedHomeScreen from "./index";
+import { ListTripScreen } from "./index";
+import ConnectedListTripScreen from "./index";
 
-describe("HomeScreen", () => {
+describe("ListTripScreen", () => {
   describe("Rendering", () => {
     const mockStore = configureStore([]);
     it("should match to snapshot", () => {
-      const wrapper = renderer.create(<HomeScreen data={trips} />).toJSON();
+      const wrapper = renderer.create(<ListTripScreen data={trips} />).toJSON();
       expect(wrapper).toMatchSnapshot();
     });
 
     it("should render all items in trips", () => {
-      const wrapper = shallow(<HomeScreen data={trips} />);
+      const wrapper = shallow(<ListTripScreen data={trips} />);
       const flatList = wrapper.find("FlatList").props();
       expect(flatList.data.length).toBe(2);
     });
 
     it("should render connected app with initialState", () => {
-      const store = mockStore({ home: { data: { trips } } })
-      const wrapper = render(<ConnectedHomeScreen />, {store});
+      const store = mockStore({ listTrip: { data: { trips } } })
+      const wrapper = render(<ConnectedListTripScreen />, {store});
       const flatList = wrapper.getByTestId('flat-list');
       expect(flatList.props.data.length).toBe(2);
     });
@@ -32,7 +32,7 @@ describe("HomeScreen", () => {
 
   it("getData function should be called during componentDidMount", () => {
     const getData = jest.fn();
-    renderer.create(<HomeScreen getData={getData} />);
+    renderer.create(<ListTripScreen getData={getData} />);
     expect(getData).toHaveBeenCalled();
   });
 
@@ -40,7 +40,7 @@ describe("HomeScreen", () => {
     it("should navigate to other screen when press on item", () => {
       const tripIndex = 0;
       const navigation = { navigate: jest.fn() };
-      const wrapper = renderer.create(<HomeScreen navigation={navigation} />);
+      const wrapper = renderer.create(<ListTripScreen navigation={navigation} />);
       wrapper.getInstance().onPressItem(tripIndex);
       expect(navigation.navigate).toHaveBeenCalled();
     });

@@ -1,10 +1,10 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import DetailScreen from "screens/DetailScreen";
-import HomeScreen from "screens/HomeScreen";
+import ListTripScreen from "screens/ListTripScreen";
 
 const StackNavigator = createStackNavigator();
-const INITIAL_ROUTE_NAME = "HomeScreen";
+const INITIAL_ROUTE_NAME = "ListTripScreen";
 
 const MainStackNavigator = () => {
   return (
@@ -14,7 +14,7 @@ const MainStackNavigator = () => {
       }}
       initialRouteName={INITIAL_ROUTE_NAME}
     >
-      <StackNavigator.Screen name="HomeScreen" component={HomeScreen} />
+      <StackNavigator.Screen name="ListTripScreen" component={ListTripScreen} />
       <StackNavigator.Screen
         name="DetailScreen"
         component={DetailScreen}

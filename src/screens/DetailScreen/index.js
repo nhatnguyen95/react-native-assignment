@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import moment from "moment";
 import Layout from 'components/Layout';
-import { selectTrips } from "core/home/selectors";
-import Strings from "../../constants/Strings";
+import Strings from "constants/Strings";
 import styles from "./styles";
+import { selectTrips } from "core/listTrip/selectors";
 
 export class DetailScreen extends React.Component {
   state = {

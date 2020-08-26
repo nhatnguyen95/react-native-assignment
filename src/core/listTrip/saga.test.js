@@ -1,18 +1,17 @@
 import { takeEvery, put, call } from "redux-saga/effects";
 import { trips } from "constants/MockData";
-import { getRecruitmentChallenges } from "services/Apis";
 import { GET_DATA } from "./const";
 import { getDataSuccess, getDataFail } from "./actions";
-const { watchHome, getDataSaga } = require("./saga");
+const { watchListTrip, getDataSaga } = require("./saga");
 
-describe("Home saga", () => {
-  const genWatchHome = watchHome();
+describe("ListTrip saga", () => {
+  const genWatchListTrip = watchListTrip();
   it("should wait for every GET_DATA action and call getDataSaga", () => {
-    expect(genWatchHome.next().value).toEqual(takeEvery(GET_DATA, getDataSaga));
+    expect(genWatchListTrip.next().value).toEqual(takeEvery(GET_DATA, getDataSaga));
   });
 
   it("should be done on next iteration", () => {
-    expect(genWatchHome.next().done).toBeTruthy();
+    expect(genWatchListTrip.next().done).toBeTruthy();
   });
 
   it("should dispatch getDataSuccess data when get data success", () => {

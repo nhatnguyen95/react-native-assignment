@@ -4,13 +4,12 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import Layout from "components/Layout";
 import styles from "./styles";
-import { selectTrips } from "core/home/selectors";
-import { getDataAction } from "core/home/actions";
 import TripItem from "./components/TripItem";
 import LoadingView from "components/LoadingView";
-import { selectIsLoading } from "../../core/home/selectors";
+import { selectIsLoading, selectTrips } from "core/listTrip/selectors";
+import { getDataAction } from "core/listTrip/actions";
 
-export class HomeScreen extends React.Component {
+export class ListTripScreen extends React.Component {
   componentDidMount() {
     const { getData } = this.props;
     getData();
@@ -33,6 +32,7 @@ export class HomeScreen extends React.Component {
 
   render() {
     const { data, navigation, isLoading } = this.props;
+    console.log('isLoading', isLoading);
     return (
       <Layout
         navigation={navigation}
@@ -63,16 +63,16 @@ const mapDispatchToProps = (dispatch) => ({
   getData: () => dispatch(getDataAction()),
 });
 
-HomeScreen.propTypes = {
+ListTripScreen.propTypes = {
   data: PropTypes.array,
   getData: PropTypes.func,
   isLoading: PropTypes.bool,
 };
 
-HomeScreen.defaultProps = {
+ListTripScreen.defaultProps = {
   data: [],
   getData: () => {},
   isLoading: false,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(ListTripScreen);

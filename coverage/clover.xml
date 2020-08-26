@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1597897151486" clover="3.2.0">
-  <project timestamp="1597897151486" name="All files">
-    <metrics statements="69" coveredstatements="68" conditionals="24" coveredconditionals="20" methods="26" coveredmethods="24" elements="119" coveredelements="112" complexity="0" loc="69" ncloc="69" packages="7" files="15" classes="15"/>
+<coverage generated="1598413095300" clover="3.2.0">
+  <project timestamp="1598413095301" name="All files">
+    <metrics statements="70" coveredstatements="69" conditionals="24" coveredconditionals="20" methods="26" coveredmethods="24" elements="120" coveredelements="113" complexity="0" loc="70" ncloc="70" packages="7" files="15" classes="15"/>
     <package name="assets.icons">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="gigacover-logo.png" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/assets/icons/gigacover-logo.png">
@@ -32,30 +32,30 @@
         <line num="3" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="core.home">
+    <package name="core.listTrip">
       <metrics statements="26" coveredstatements="26" conditionals="12" coveredconditionals="8" methods="10" coveredmethods="10"/>
-      <file name="actions.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/home/actions.js">
+      <file name="actions.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/listTrip/actions.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="3" count="4" type="stmt"/>
         <line num="7" count="4" type="stmt"/>
         <line num="12" count="4" type="stmt"/>
       </file>
-      <file name="const.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/home/const.js">
+      <file name="const.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/listTrip/const.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="2" count="5" type="stmt"/>
-        <line num="3" count="5" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
       </file>
-      <file name="reducer.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/home/reducer.js">
+      <file name="reducer.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/listTrip/reducer.js">
         <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="9" count="3" type="cond" truecount="0" falsecount="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="0" falsecount="1"/>
         <line num="10" count="3" type="cond" truecount="3" falsecount="0"/>
         <line num="12" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
       </file>
-      <file name="saga.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/home/saga.js">
+      <file name="saga.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/listTrip/saga.js">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="7" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
@@ -65,7 +65,7 @@
         <line num="15" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
       </file>
-      <file name="selectors.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/home/selectors.js">
+      <file name="selectors.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/core/listTrip/selectors.js">
         <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="4"/>
         <line num="3" count="3" type="stmt"/>
         <line num="5" count="3" type="stmt"/>
@@ -100,19 +100,20 @@
         <line num="3" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="screens.HomeScreen">
-      <metrics statements="18" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="9"/>
-      <file name="index.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/screens/HomeScreen/index.js">
-        <metrics statements="17" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="9"/>
+    <package name="screens.ListTripScreen">
+      <metrics statements="19" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="9"/>
+      <file name="index.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/screens/ListTripScreen/index.js">
+        <metrics statements="18" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="9"/>
+        <line num="14" count="5" type="stmt"/>
         <line num="15" count="5" type="stmt"/>
-        <line num="16" count="5" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="24" count="5" type="stmt"/>
-        <line num="25" count="4" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="32" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
         <line num="35" count="5" type="stmt"/>
         <line num="36" count="5" type="stmt"/>
         <line num="55" count="1" type="stmt"/>
@@ -122,14 +123,14 @@
         <line num="66" count="1" type="stmt"/>
         <line num="72" count="1" type="stmt"/>
       </file>
-      <file name="styles.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/screens/HomeScreen/styles.js">
+      <file name="styles.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/screens/ListTripScreen/styles.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="screens.HomeScreen.components.TripItem">
+    <package name="screens.ListTripScreen.components.TripItem">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
-      <file name="index.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/screens/HomeScreen/components/TripItem/index.js">
+      <file name="index.js" path="/Users/nguyennn/Documents/Learning/react-native-assignment/src/screens/ListTripScreen/components/TripItem/index.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
         <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="8" count="7" type="stmt"/>

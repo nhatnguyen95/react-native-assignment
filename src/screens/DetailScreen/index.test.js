@@ -25,7 +25,7 @@ describe("DetailScreen", () => {
   });
 
   it("should render connected app with initialState", () => {
-    const store = mockStore({ home: { data: { trips } } })
+    const store = mockStore({ listTrip: { data: { trips } } })
     const navigation = { route:{ params: { tripIndex: 0}} };
     const wrapper = render(<ConnectedDetailScreen navigation={navigation}/>, {store});
     const tripContainer = wrapper.getByTestId('trip-view');

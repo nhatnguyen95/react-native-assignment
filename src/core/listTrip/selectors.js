@@ -1,18 +1,18 @@
 import { createSelector } from "reselect";
 
-const selectHome = (state) => state.home;
+const selectListTrip = (state) => state.listTrip;
 
-export const selectHomeData = createSelector(
-  selectHome,
+export const selectListTripData = createSelector(
+  selectListTrip,
   (state) => state.data || {}
 );
 
 export const selectTrips = createSelector(
-  selectHomeData,
+  selectListTripData,
   (state) => state.trips || []
 );
 
 export const selectIsLoading = createSelector(
-  selectHome,
+  selectListTrip,
   (state) => state.isLoading
 );
