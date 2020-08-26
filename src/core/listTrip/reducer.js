@@ -1,4 +1,4 @@
-import { GET_DATA_SUCCESS, GET_DATA_FAIL, GET_DATA } from "./const";
+import { GET_DATA_SUCCESS, GET_DATA_FAIL, CLEAR_DATA } from "./const";
 
 export const initialState = {
   data: {},
@@ -22,7 +22,11 @@ const listTripReducer = (state = initialState, action) => {
         error: action.error,
         isLoading: false,
       };
-
+    case CLEAR_DATA:
+      return {
+        ...state,
+        data: {},
+      }
     default:
       return {
         ...state,

@@ -8,4 +8,8 @@ export default {
   SECONDS: 'second(s)',
   KILOMETERS: 'kilometer(s)',
   TRIP_ID: 'TRIP',
+  TWO_TRIPS: 'TWO TRIPS',
+  EMPTY_TRIP: 'EMPTY TRIP',
+  BIG_TRIPS: 'BIG TRIPS',
+  DATA_NOT_FOUND : 'Data not found!',
 };
