@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderWidth: 1,
     borderColor: '#51bd8a',
-    paddingVertical: 20,
     paddingHorizontal: 10,
   },
   tripIdText: {
